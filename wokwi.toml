@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/Embarca_temporizador_clock.uf2'
+elf = 'build/Embarca_temporizador_clock.elf'

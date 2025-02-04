@@ -1,0 +1,72 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "wokwi-pi-pico",
+        "id": "pico",
+        "top": -12.75,
+        "left": 51.6,
+        "attrs": { "env": "arduino-community" }
+      },
+      { "type": "wokwi-led", "id": "led1", "top": 54, "left": -82.6, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": 92.4,
+        "left": -82.6,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": 140.4,
+        "left": -82.6,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 224.75,
+        "left": -48,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 243.95,
+        "left": -48,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 205.55,
+        "left": -48,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": 6.2,
+        "left": -28.8,
+        "attrs": { "color": "black" }
+      }
+    ],
+    "connections": [
+      [ "$serialMonitor:RX", "pico:GP0", "", [] ],
+      [ "btn1:1.r", "pico:GND.1", "black", [ "v0" ] ],
+      [ "btn1:2.r", "pico:GP4", "green", [ "h0" ] ],
+      [ "r3:2", "pico:GND.4", "black", [ "h27.6", "v-48" ] ],
+      [ "r1:2", "pico:GND.4", "black", [ "h27.6", "v-67.2" ] ],
+      [ "r2:2", "pico:GND.4", "black", [ "h27.6", "v-86.4" ] ],
+      [ "led3:A", "pico:GP13", "green", [ "h48", "v-28.8" ] ],
+      [ "led2:A", "pico:GP12", "green", [ "v0" ] ],
+      [ "led1:A", "pico:GP11", "green", [ "h38.4", "v38.4" ] ],
+      [ "led3:C", "r3:1", "#8f4814", [ "h-66.8", "v28.8" ] ],
+      [ "led2:C", "r1:1", "#8f4814", [ "h-66.8", "v96" ] ],
+      [ "led1:C", "r2:1", "#8f4814", [ "h-66.8", "v153.6" ] ]
+    ],
+    "dependencies": {}
+  }
