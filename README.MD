@@ -37,9 +37,7 @@ Este projeto visa criar um sistema de temporização para o acionamento de LEDs 
 1. Clonar o repositório:
    ```sh
    git clone https://github.com/seu-usuario/temporizador-one-shot.git
-   
-   cd temporizador-one-shot
-   
-   Compile o projeto
-
+   cd Embarca_temporizador_cloch
+    code .  //para abrir o VS code 
+   Compile o projeto (Compile Project)
    Simulação wokwi  - clique no arquivo diagram.json para se conduzido a simulação, ter play para iniciar a simulação no wokwi.
